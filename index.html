@@ -200,6 +200,43 @@
       height: 20px;
       object-fit: contain;
     }
+    .recommendations-container {
+      margin-top: 1.2rem;
+      background: #121212;
+      padding: 1rem;
+      border-radius: var(--radius);
+      border: 1px solid #333;
+    }
+    
+    .recommendation-card {
+      margin-bottom: 1rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid #222;
+    }
+    
+    .rec-summary {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    
+    .read-more {
+      color: var(--accent);
+      cursor: pointer;
+      font-weight: 600;
+    }
+    
+    .read-more:hover {
+      text-decoration: underline;
+    }
+    
+    .rec-full {
+      color: var(--primary);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-top: 0.6rem;
+      transition: all 0.3s ease;
+    }
+    
     #awards .grid {
       display: flex;
       flex-wrap: wrap;
@@ -300,19 +337,29 @@
           <div class="about-intro">
             <h3>Software Engineer II at Trimble Inc.</h3>
             <div class="about-info">
-              <div class="info-item"><strong>Experience</strong>3.2 years (2022 - 2025)</div>
-              <div class="info-item"><strong>Primary Skills</strong>Android Full-Stack Developer (Kotlin, Java, MAUI), C++, C# , CI/CD setup, R&D project, AI Development</div>
+              <div class="info-item"><strong>Experience</strong>3.2 years<br>July 2022 - August 2025</div>
+              <div class="info-item"><strong>Primary Skills</strong>Android Full-Stack Developer (Kotlin, Java, MAUI)
+                <br> C++, C# , CI/CD setup, R&D project, AI Development</div>
               <div class="info-item"><strong>Secondary Skills</strong>Python, FastAPI, C# .NET Core Backend, SOLID principles, Architecture Patterns</div>
               <div class="info-item"><strong>Current Location</strong>Trivandrum, Kerala, India</div>
               <div class="info-item"><strong>Collaboration</strong>Worked with global teams (UK, Finland, Germany, US)</div>
-              <div class="info-item"><strong>Availability</strong>Immediate Joiner, Completed Notice Period</div>
+              <div class="info-item">
+                <strong>Availability</strong>
+                Immediate Joiner <br> Completed Notice Period<br>
+                Flexible with : <br> Remote/Hybrid/On-site Roles<br>
+              </div>
+              
             </div>
       
         
             <div class="about-extra">
               <h4>Data Structures & Algorithms Proficiency</h4>
-              <p>Actively solving algorithmic challenges across top platforms — proficient in arrays, trees, dynamic programming, and graph-based problems. Consistently participate in contests and maintain strong rankings, reinforcing problem-solving and analytical skills essential for large-scale systems engineering.</p>
+              <p>Comfortable with a wide range of data structures and algorithms, including arrays, linked lists, trees, graphs, and dynamic programming. Regularly practice medium to hard problems to strengthen core problem-solving skills and coding efficiency.</p>
               <div class="coding-links">
+                <a href="https://github.com/pooja-p-s" target="_blank" class="coding-link">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                       alt="GitHub Logo" class="coding-logo" style="filter: invert(1);">GitHub
+                </a>
                 <a href="https://leetcode.com/u/POOJA_P_S/" target="_blank" class="coding-link">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" 
                        alt="LeetCode Logo" class="coding-logo">LeetCode
@@ -325,6 +372,7 @@
                   <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" 
                        alt="GeeksforGeeks Logo" class="coding-logo">GeeksforGeeks
                 </a>
+                
               </div>
               
             </div>
@@ -337,7 +385,7 @@
       <section id="experience">
         <h2 class="section-title">Experience</h2>
         <div class="card">
-          <h3><span style="color: var(--accent); font-weight: 700;">Trimble Inc.</span> — Software Engineer II</h3>
+          <h3><span style="color: var(--accent); font-weight: 700;">Trimble Inc.</span> - Software Engineer II</h3>
       
           <p>
             <strong>Location:</strong> Chennai, India |
@@ -375,21 +423,29 @@
             across global product lines.
           </p>
       
-          <div class="recommendation">
-            <p><strong>Sriram Narasimhan, Director Engineering at Trimble Inc, Chennai</strong><br>
-            <em>LinkedIn Recommendation</em></p>
-            <p>“I had the opportunity to work with Pooja on the SUPL project at Trimble, where she joined my team and immediately took on a significant challenge. As the lone contributor on the project, Pooja single-handedly managed the entire scope. Right after getting the knowledge transfer from me, she took care of navigating complex technical hurdles and collaborating with global teams. Even with minimal support from me due to my commitments on other projects, she consistently delivered her work to a high standard, working late nights (when needed) to accommodate her international colleagues' schedules. Her ability to multitask and deliver on other projects simultaneously further showcases her adaptability and dedication. Pooja is a highly skilled, resilient, and resourceful professional who can make a significant impact on any team.”</p>
-          </div>
-      
-          <div class="recommendation">
-            <p><strong>Ramaraj Thangapandi, Staff Software Engineer, Trimble Inc.</strong><br>
-            <em>LinkedIn Recommendation</em></p>
-            <p>“I had the pleasure of working alongside Pooja during the release of TPM version 1.5, a significant milestone in the project. Pooja's dedication and expertise were instrumental in overcoming the challenges associated with this project, which was in maintenance mode with no active development.
+          <div class="recommendations-container">
+            <h4 style="color: var(--accent); margin-bottom: 0.8rem;">LinkedIn Recommendations</h4>
+          
+            <div class="recommendation-card">
+              <p><strong>Sriram Narasimhan</strong> — Director Engineering, Trimble Inc.</p>
+              <p class="rec-summary">LinkedIn Recommendation · <span class="read-more" onclick="toggleRecommendation(this)">Read</span></p>
+              <p class="rec-full" style="display:none;">
+                “I had the opportunity to work with Pooja on the SUPL project at Trimble, where she joined my team and immediately took on a significant challenge. As the lone contributor on the project, Pooja single-handedly managed the entire scope. Right after getting the knowledge transfer from me, she took care of navigating complex technical hurdles and collaborating with global teams. Even with minimal support from me due to my commitments on other projects, she consistently delivered her work to a high standard, working late nights (when needed) to accommodate her international colleagues' schedules. Her ability to multitask and deliver on other projects simultaneously further showcases her adaptability and dedication. Pooja is a highly skilled, resilient, and resourceful professional who can make a significant impact on any team.”
+              </p>
+            </div>
+          
+            <div class="recommendation-card">
+              <p><strong>Ramaraj Thangapandi</strong> — Staff Software Engineer, Trimble Inc.</p>
+              <p class="rec-summary">LinkedIn Recommendation · <span class="read-more" onclick="toggleRecommendation(this)">Read</span></p>
+              <p class="rec-full" style="display:none;">
+                “I had the pleasure of working alongside Pooja during the release of TPM version 1.5, a significant milestone in the project. Pooja's dedication and expertise were instrumental in overcoming the challenges associated with this project, which was in maintenance mode with no active development.
 
               Despite having limited experience with Xamarin.Forms, Pooja took on the development with remarkable determination and successfully brought the application up to date. Her ability to adapt and learn quickly was evident as she navigated the complexities. She also had to work with people across multiple timezones during the development.
               
-              Her contributions have made a lasting impact on the project and the company."</div>
-        </div>
+              Her contributions have made a lasting impact on the project and the company."
+              </p>
+            </div>
+          </div>
       </section>
       
 
@@ -397,32 +453,24 @@
         <h2 class="section-title">Personal Projects</h2>
         <div class="grid">
           <div class="card">
-            <h3>MindfulWork — Focus & Mood Tracker</h3>
+            <h3>MindfulWork - Focus & Mood Tracker</h3>
             <img src="mindfulwork.png" alt="MindfulWork App UI" style="width:100%; border-radius: var(--radius); margin-bottom: 0.8rem;">
-            <p><strong>Stack:</strong> Kotlin · Jetpack Compose · Clean Architecture · Hilt · Room · DataStore</p>
+            <p><strong>Stack:</strong> Kotlin · Jetpack Compose · Clean Architecture · Hilt · Room · DataStore · Gemini</p>
             <p>A mindfulness-driven productivity app built with Jetpack Compose to track focus sessions and mood patterns, helping users visualize how emotional states influence work performance. Demonstrates advanced Compose UI, MVVM layering, reactive state handling, and modular Kotlin design. <br><strong>Duration:</strong> 4 days</p>
             <a href="https://github.com/pooja-p-s/mindfulworkapp" target="_blank">GitHub</a> |
             <a href="https://drive.google.com/file/d/1Ijqe-_49-XATtAnBmcFoHrd-2sx6SWU4/view?usp=share_link" target="_blank">Video Demo</a>
           </div>
           
           <div class="card">
-            <h3>OnlineFoodApp — Simple Food Delivery UI</h3>
+            <h3>OnlineFoodApp - Simple Food Delivery UI</h3>
             <img src="onlinefoodapp.png" alt="Online Food App UI" style="width:100%; border-radius: var(--radius); margin-bottom: 0.8rem;">
-            <p><strong>Stack:</strong> Kotlin · Jetpack Compose (Material 3) · MVVM · Clean Architecture · Compose Navigation</p>
-            <p>A complete food delivery flow built with Jetpack Compose and Material 3. Includes cart management, checkout, and order success screens — following MVVM with state-driven UI. Focused on reusable composables, scalable architecture, and real-world UI/UX fidelity. <br><strong>Duration:</strong> 4 days</p>
+            <p><strong>Stack:</strong> Kotlin · Jetpack Compose (Material 3) · MVVM · Clean Architecture · Compose Navigation · Gemini</p>
+            <p>A complete food delivery flow built with Jetpack Compose and Material 3. Includes cart management, checkout, and order success screens - following MVVM with state-driven UI. Focused on reusable composables, scalable architecture, and real-world UI/UX fidelity. <br><strong>Duration:</strong> 4 days</p>
             <a href="https://github.com/pooja-p-s/fooddeliveryapp" target="_blank">GitHub</a> |
             <a href="https://drive.google.com/file/d/1YrceolrgLI1kyVOVhk_bwNeyFp6NGGhm/view?usp=share_link" target="_blank">Video Demo</a>
           </div>
           
-          
-          <div class="card">
-            <h3>Expense Tracker App</h3>
-            <img src="expense-tracker-ui.png" alt="Expense Tracker UI" style="width:100%; border-radius: var(--radius); margin-bottom: 0.8rem;">
-            <p><strong>Stack:</strong> Kotlin, Jetpack Compose, Room DB</p>
-            <p>Modern Android app to manage daily expenses with charts and real-time budget updates using Compose and MVVM.</p>
-            <a href="https://github.com/pooja-ps/expense-tracker" target="_blank">GitHub</a> |
-            <a href="https://youtu.be/demo-expense-tracker" target="_blank">Video Demo</a>
-          </div>
+        
         </div>
     </section>
 
@@ -431,7 +479,7 @@
       <div class="grid" id="awards-grid">
     
         <div class="card">
-          <h3>Bravo Recognitions — Trimble Inc.</h3>
+          <h3>Bravo Recognitions - Trimble Inc.</h3>
           <p>Received multiple Bravo Awards for exceptional ownership, innovation, and cross-team collaboration across Trimble’s mobile and backend teams.</p>
           <a href="https://drive.google.com/file/d/19l-o8VPP3KILN_ux76oxVUxby_42_DOn/view?usp=share_link" target="_blank" style="color: var(--accent); font-weight: 600; font-size: 0.9rem;">Recognitions Document</a>
         </div>
@@ -457,7 +505,7 @@
       
           <div class="card">
             <h3>Forestry Demand Planning</h3>
-            <p><strong>Trimble Inc. | May 2025 – Jul 2025</strong></p>
+          
             <p>Built the backend foundation for an enterprise forestry planning platform using Clean Architecture and MediatR-CQRS patterns.</p>
             <ul style="margin-left:1rem; color:var(--muted); font-size:0.9rem;">
               <li>Containerized services with Docker and integrated MongoDB for scalable data management.</li>
@@ -469,10 +517,11 @@
           <div class="card app-card">
            
             <h3>Trimble Data Manager</h3>
-            <p><strong>Trimble Inc. | Feb 2025 – May 2025</strong></p>
+            
             <p>System-level Android app for Trimble TSC7/TSC5 controllers enabling unified, secure file access across multiple Trimble apps.</p>
             <ul style="margin-left:1rem; color:var(--muted); font-size:0.9rem;">
               <li>Led end-to-end development using Kotlin, Jetpack Compose, Room, and MVVM.</li>
+              <li>Mentored juniors and actively collaborated with global teams including Product Managers and UI/UX teams.</li>
               <li>Implemented scoped storage and background I/O with RxJava ensuring enterprise-grade performance.</li>
             </ul>
             <p><strong>Stack:</strong> Kotlin · Jetpack Compose · MVVM · Room · SAF · RxJava</p>
@@ -483,7 +532,7 @@
           <div class="card app-card">
           
             <h3>Trimble Perspective Mobile</h3>
-            <p><strong>Trimble Inc. | Mar 2024 – Feb 2025</strong></p>
+            
             <p>Companion app for Trimble X7/X9 3D laser scanners used by global survey professionals.</p>
             <ul style="margin-left:1rem; color:var(--muted); font-size:0.9rem;">
               <li>Integrated BLE/Wi-Fi communication, 3D scan preview, and hardware subscription licensing.</li>
@@ -496,7 +545,7 @@
           <!-- Trimble Mobile Modus -->
           <div class="card">
             <h3>Trimble Mobile Modus (AOSP)</h3>
-            <p><strong>Trimble Inc. | Oct 2023 – Mar 2024</strong></p>
+            
             <p>Open-source design system for all Trimble mobile apps, standardizing cross-platform UI and behavior.</p>
             <ul style="margin-left:1rem; color:var(--muted); font-size:0.9rem;">
               <li>Built reusable .NET MAUI components using MVVM and Dependency Injection.</li>
@@ -509,7 +558,7 @@
       
           <div class="card">
             <h3>SUPL Protocol Stack Development</h3>
-            <p><strong>Trimble Inc. | Dec 2022 – Oct 2023</strong></p>
+          
             <p>Enhanced GNSS Secure User Plane Location (SUPL) stack for centimeter-level positioning accuracy.</p>
             <ul style="margin-left:1rem; color:var(--muted); font-size:0.9rem;">
               <li>Developed C++ modules for message encoding/decoding and TCP/IP communication.</li>
@@ -521,7 +570,7 @@
           <div class="card app-card">
           
             <h3>Trimble Precision IQ</h3>
-            <p><strong>Trimble Inc. | Jul 2022 – Dec 2022</strong></p>
+           
             <p>Production-grade precision agriculture app used by 50K+ global customers for field mapping and guidance.</p>
             <ul style="margin-left:1rem; color:var(--muted); font-size:0.9rem;">
               <li>Improved localization, precision handling, and stability for international markets.</li>
@@ -534,7 +583,7 @@
           <div class="card app-card">
           
             <h3>Trimble Mobile Manager</h3>
-            <p><strong>Trimble Inc. | Ongoing</strong></p>
+            
             <p>GNSS correction and configuration app with 50K+ downloads supporting professional survey devices.</p>
             <ul style="margin-left:1rem; color:var(--muted); font-size:0.9rem;">
               <li>Maintained real-time GNSS correction logic and improved device interoperability.</li>
@@ -559,7 +608,7 @@
   </main>
 
   <footer>
-    <p>© 2025 Pooja P S — Open to Work | Kotlin · Android · .NET · Docker · AI-assisted Development</p>
+    <p>© 2025 Pooja P S - Open to Work | Android · .NET · C++ · AI-assisted Development</p>
   </footer>
 
   <script>
@@ -643,6 +692,12 @@
         });
       });
     });
+    function toggleRecommendation(element) {
+      const fullText = element.parentElement.nextElementSibling;
+      const isVisible = fullText.style.display === "block";
+      fullText.style.display = isVisible ? "none" : "block";
+      element.textContent = isVisible ? "Read" : "Hide";
+    }
     
 
   </script>
