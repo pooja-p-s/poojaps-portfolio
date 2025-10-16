@@ -281,6 +281,52 @@
       text-decoration: underline;
     }
     
+    .cert-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    
+    .cert-item {
+      display: flex;
+      align-items: center;
+      background: #121212;
+      border: 1px solid #333;
+      border-radius: var(--radius);
+      padding: 0.8rem 1rem;
+      transition: var(--transition);
+    }
+    
+    .cert-item:hover {
+      background: #1e1e1e;
+      transform: translateY(-2px);
+    }
+    
+    .cert-logo {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-right: 1rem;
+    }
+    
+    .cert-details h4 {
+      color: var(--accent);
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+    
+    .cert-details p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin-bottom: 0.2rem;
+    }
+    
+    .cert-skills {
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-style: italic;
+    }
     
     
     .toggle-btn {
@@ -309,6 +355,7 @@
       width: 90%; max-width: 900px; max-height: 90%; object-fit: contain;
       border-radius: 12px; cursor: zoom-out;
     }
+  
   </style>
 </head>
 
@@ -324,104 +371,96 @@
       <a href="#experience">Experience</a>
       <a href="#personal-projects">Projects</a>
       <a href="#awards">Achievements</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#education">Education</a>
       <a href="#company-projects">Company Projects</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
+    
     <section id="about">
-        
-        <div class="about-container">
-          <img src="IMG_5530.jpg" alt="Pooja P S" class="about-photo">
-          <div class="about-intro">
-            <h3>Software Engineer II at Trimble Inc.</h3>
-            <div class="about-info">
-              <div class="info-item"><strong>Experience</strong>3.2 years<br>July 2022 - August 2025</div>
-              <div class="info-item"><strong>Primary Skills</strong>Android Full-Stack Developer (Kotlin, Java, MAUI)
-                <br> C++, C# , CI/CD setup, R&D project, AI Development</div>
-              <div class="info-item"><strong>Secondary Skills</strong>Python, FastAPI, C# .NET Core Backend, SOLID principles, Architecture Patterns</div>
-              <div class="info-item"><strong>Current Location</strong>Trivandrum, Kerala, India</div>
-              <div class="info-item"><strong>Collaboration</strong>Worked with global teams (UK, Finland, Germany, US)</div>
-              <div class="info-item">
-                <strong>Availability</strong>
-                Immediate Joiner <br> Completed Notice Period<br>
-                Flexible with : <br> Remote/Hybrid/On-site Roles<br>
-              </div>
-              
+      <div class="about-container">
+        <img src="IMG_5530.jpg" alt="Pooja P S" class="about-photo">
+        <div class="about-intro">
+          <h3>Software Engineer II · Android | .NET | C++ | AI-driven Development</h3>
+
+          <!-- Added About Summary -->
+          <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.2rem;">
+            3+ years building high-performance Android and cross-platform products for global customers.
+            Strong in Kotlin, .NET MAUI, and C++ with focus on scalable architectures, AI-assisted DevOps, and clean code practices.
+          </p>
+
+          <div class="about-info">
+            <div class="info-item"><strong>Experience</strong>3.2 years<br>July 2022 - August 2025</div>
+            <div class="info-item"><strong>Primary Skills</strong>Kotlin · Jetpack Compose · .NET MAUI · C++ · C# · CI/CD</div>
+            <div class="info-item"><strong>Secondary Skills</strong>Python · FastAPI · .NET Core · SOLID · System Design</div>
+            <div class="info-item"><strong>Current Location</strong>Trivandrum, Kerala, India</div>
+            <div class="info-item"><strong>Collaboration</strong>Worked with global teams (UK, Finland, Germany, US)</div>
+            <div class="info-item">
+              <strong>Availability</strong>
+              Immediate Joiner <br> Completed Notice Period<br>
+              Flexible with : <br> Remote/Hybrid/On-site Roles<br>
             </div>
-      
-        
-            <div class="about-extra">
-              <h4>Data Structures & Algorithms Proficiency</h4>
-              <p>Comfortable with a wide range of data structures and algorithms, including arrays, linked lists, trees, graphs, and dynamic programming. Regularly practice medium to hard problems to strengthen core problem-solving skills and coding efficiency.</p>
-              <div class="coding-links">
-                <a href="https://github.com/pooja-p-s" target="_blank" class="coding-link">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                       alt="GitHub Logo" class="coding-logo" style="filter: invert(1);">GitHub
-                </a>
-                <a href="https://leetcode.com/u/POOJA_P_S/" target="_blank" class="coding-link">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" 
-                       alt="LeetCode Logo" class="coding-logo">LeetCode
-                </a>
-                <a href="https://www.hackerrank.com/profile/poojaps" target="_blank" class="coding-link">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" 
-                       alt="HackerRank Logo" class="coding-logo">HackerRank
-                </a>
-                <a href="https://www.geeksforgeeks.org/user/poojaps2022sc5/" target="_blank" class="coding-link">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" 
-                       alt="GeeksforGeeks Logo" class="coding-logo">GeeksforGeeks
-                </a>
-                
-              </div>
-              
+          </div>
+          <div style="margin-top: 1rem; display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 0.8rem;">
+            <a href="Pooja_P_S_Resume.pdf" target="_blank"
+               style="display:inline-flex; align-items:center; background: var(--accent); color:#fff;
+                      font-weight:600; padding:0.55rem 1.1rem; border-radius:var(--radius);
+                      text-decoration:none; font-size:0.9rem; transition: var(--transition);">
+              <i class="fas fa-download" style="margin-right:0.5rem;"></i>Download Resume
+            </a>
+            <a href="Pooja_P_S_Resume.pdf" target="_blank"
+               style="display:inline-flex; align-items:center; background:#1a1a1a; color:var(--accent);
+                      font-weight:600; padding:0.55rem 1.1rem; border-radius:var(--radius);
+                      text-decoration:none; font-size:0.9rem; border:1px solid var(--accent);
+                      transition: var(--transition);">
+              <i class="fas fa-eye" style="margin-right:0.5rem;"></i>View Resume
+            </a>
+          </div>
+          
+
+          <div class="about-extra">
+            <h4>Data Structures & Algorithms Proficiency</h4>
+            <p>Comfortable with a wide range of data structures and algorithms, including arrays, linked lists, trees, graphs, and dynamic programming. Regularly practice medium to hard problems to strengthen core problem-solving skills and coding efficiency.</p>
+            <div class="coding-links">
+              <a href="https://github.com/pooja-p-s" target="_blank" class="coding-link">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                     alt="GitHub Logo" class="coding-logo" style="filter: invert(1);">GitHub
+              </a>
+              <a href="https://leetcode.com/u/POOJA_P_S/" target="_blank" class="coding-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                     alt="LeetCode Logo" class="coding-logo">LeetCode
+              </a>
+              <a href="https://www.hackerrank.com/profile/poojaps" target="_blank" class="coding-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png"
+                     alt="HackerRank Logo" class="coding-logo">HackerRank
+              </a>
+              <a href="https://www.geeksforgeeks.org/user/poojaps2022sc5/" target="_blank" class="coding-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg"
+                     alt="GeeksforGeeks Logo" class="coding-logo">GeeksforGeeks
+              </a>
             </div>
           </div>
         </div>
-      </section>
-      
+      </div>
+    </section>  
 
 
-      <section id="experience">
-        <h2 class="section-title">Experience</h2>
-        <div class="card">
-          <h3><span style="color: var(--accent); font-weight: 700;">Trimble Inc.</span> - Software Engineer II</h3>
-      
-          <p>
-            <strong>Location:</strong> Chennai, India |
-            <strong>Duration:</strong> July 2022 – August 2025 |
-            <strong>Promotion:</strong>
-            <span style="color: var(--accent); font-weight: 600;">Software Engineer → Software Engineer II</span>
-          </p>
-      
-          <p>
-            <strong>Website:</strong>
-            <a href="https://www.trimble.com" target="_blank" style="color: var(--accent); font-weight: 600;">www.trimble.com</a>
-          </p>
-      
-          <p>
-            <span style="color: var(--accent); font-weight: 600;">Trimble Inc.</span> is a
-            <span style="color: var(--accent); font-weight: 600;">Fortune 1000</span> Product Based MNC delivering industrial
-            technology solutions across construction, agriculture, geospatial, and transportation sectors.
-            I contributed to several large-scale mobile and backend products used by 150K+ global customers,
-            focusing on performance, stability, and cross-platform integration.
-          </p>
-      
-          <p>
-            <strong>Key Teams:</strong>
-            <span style="color: var(--accent); font-weight: 600;">Mobile Engineering (Android/MAUI)</span>,
-            <span style="color: var(--accent); font-weight: 600;">GNSS Stack (C++)</span>,
-            <span style="color: var(--accent); font-weight: 600;">Ericsson R&D</span>,
-            <span style="color: var(--accent); font-weight: 600;">Agentic AI Initiatives</span>
-          </p>
-      
-          <p>
-            <strong>Major Contributions:</strong>
-            Designed production-ready Android modules in Kotlin and Jetpack Compose,
-            migrated legacy Xamarin projects to .NET MAUI, and implemented AI-assisted DevOps pipelines.
-            Delivered multiple end-to-end features, optimized CI/CD workflows, and drove faster release cycles
-            across global product lines.
-          </p>
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="card">
+        <h3><span style="color: var(--accent); font-weight: 700;">Trimble Inc.</span> - Software Engineer II</h3>
+        <p><strong>Location:</strong> Chennai, India | <strong>Duration:</strong> July 2022 – August 2025 | <strong>Promotion:</strong> <span style="color: var(--accent); font-weight: 600;">Software Engineer → Software Engineer II</span></p>
+        <p><strong>Website:</strong> <a href="https://www.trimble.com" target="_blank" style="color: var(--accent); font-weight: 600;">www.trimble.com</a></p>
+        <p><span style="color: var(--accent); font-weight: 600;">Trimble Inc.</span> is a Fortune 1000 <span style="color: var(--accent); font-weight: 700;">Product MNC</span> delivering industrial technology solutions across construction, agriculture, geospatial, and transportation sectors.</p>
+
+        <ul style="margin-left:1rem; color:var(--muted); font-size:0.9rem;">
+          <li>Designed Android modules with Jetpack Compose and .NET MAUI, improving release velocity by 30%.</li>
+          <li>Migrated legacy Xamarin apps to MAUI, reducing maintenance overhead.</li>
+          <li>Built AI-assisted CI/CD workflows integrating AWS and GitHub Actions.</li>
+        </ul>
       
           <div class="recommendations-container">
             <h4 style="color: var(--accent); margin-bottom: 0.8rem;">LinkedIn Recommendations</h4>
@@ -456,7 +495,10 @@
             <h3>MindfulWork - Focus & Mood Tracker</h3>
             <img src="mindfulwork.png" alt="MindfulWork App UI" style="width:100%; border-radius: var(--radius); margin-bottom: 0.8rem;">
             <p><strong>Stack:</strong> Kotlin · Jetpack Compose · Clean Architecture · Hilt · Room · DataStore · Gemini</p>
-            <p>A mindfulness-driven productivity app built with Jetpack Compose to track focus sessions and mood patterns, helping users visualize how emotional states influence work performance. Demonstrates advanced Compose UI, MVVM layering, reactive state handling, and modular Kotlin design. <br><strong>Duration:</strong> 4 days</p>
+            <p>A mindfulness-driven productivity app built with Jetpack Compose to track focus sessions and mood patterns, helping users visualize how emotional states influence work performance. Demonstrates advanced Compose UI, MVVM layering, reactive state handling, and modular Kotlin design. 
+              <br>
+              <br><strong>Team size:</strong> 1
+              <br><strong>Duration:</strong> 4 days</p>
             <a href="https://github.com/pooja-p-s/mindfulworkapp" target="_blank">GitHub</a> |
             <a href="https://drive.google.com/file/d/1Ijqe-_49-XATtAnBmcFoHrd-2sx6SWU4/view?usp=share_link" target="_blank">Video Demo</a>
           </div>
@@ -465,7 +507,9 @@
             <h3>OnlineFoodApp - Simple Food Delivery UI</h3>
             <img src="onlinefoodapp.png" alt="Online Food App UI" style="width:100%; border-radius: var(--radius); margin-bottom: 0.8rem;">
             <p><strong>Stack:</strong> Kotlin · Jetpack Compose (Material 3) · MVVM · Clean Architecture · Compose Navigation · Gemini</p>
-            <p>A complete food delivery flow built with Jetpack Compose and Material 3. Includes cart management, checkout, and order success screens - following MVVM with state-driven UI. Focused on reusable composables, scalable architecture, and real-world UI/UX fidelity. <br><strong>Duration:</strong> 4 days</p>
+            <p>A complete food delivery flow built with Jetpack Compose and Material 3. Includes cart management, checkout, and order success screens - following MVVM with state-driven UI. Focused on reusable composables, scalable architecture, and real-world UI/UX fidelity. 
+              <br><br><strong>Team size:</strong> 1
+              <br><strong>Duration:</strong> 4 days</p>
             <a href="https://github.com/pooja-p-s/fooddeliveryapp" target="_blank">GitHub</a> |
             <a href="https://drive.google.com/file/d/1YrceolrgLI1kyVOVhk_bwNeyFp6NGGhm/view?usp=share_link" target="_blank">Video Demo</a>
           </div>
@@ -497,7 +541,63 @@
       </div>
     </section>
     
-      
+    <section id="certifications">
+      <h2 class="section-title">Licenses & Certifications</h2>
+      <div class="cert-list">
+    
+        <div class="cert-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="cert-logo">
+          <div class="cert-details">
+            <h4>Cloud Computing Essentials with Azure Management</h4>
+            <p><strong>Issuer:</strong> Microsoft · <strong>Issued:</strong> Jul 2025 · <strong>ID:</strong> O88H69FUFU4Y</p>
+            <p class="cert-skills">Cloud Computing · Microsoft Azure</p>
+          </div>
+        </div>
+    
+        <div class="cert-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="cert-logo">
+          <div class="cert-details">
+            <h4>IBM AI Developer Professional Certification</h4>
+            <p><strong>Issuer:</strong> IBM · <strong>Issued:</strong> Nov 2024 · <strong>ID:</strong> 37DR0DYT9TO4</p>
+            <p class="cert-skills">10 Courses · Generative AI · IBM Watson · Python</p>
+          </div>
+        </div>
+    
+    
+    
+        <div class="cert-item">
+          <img src="iitmadras.png" alt="IIT Madras" class="cert-logo">
+          <div class="cert-details">
+            <h4>Python for Data Science</h4>
+            <p><strong>Issuer:</strong> Indian Institute of Technology, Madras · <strong>Issued:</strong> Sep 2020 · <strong>ID:</strong> NPTEL20CS80S42440196</p>
+            <p class="cert-skills">Data Science · Pandas · NumPy</p>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+    
+    
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="card">
+        <h3>
+          <a href="https://www.sctce.ac.in" target="_blank" 
+             style="color: var(--accent); text-decoration: underline; font-weight: 600;">
+            Sree Chitra Thirunal College of Engineering, Thiruvananthapuram
+          </a>
+        </h3>
+        <p><strong>Degree:</strong> Bachelor of Technology (B.Tech) in Computer Science and Engineering<br>
+           <strong>Duration:</strong> August 2018 – June 2022<br>
+           <strong>Grade:</strong> <span style="color: var(--accent); font-weight: 600;">9.66 / 10.00</span></p>
+        <p><strong>Activities and Societies:</strong> IEEE · SCTCE Landscape</p>
+        <ul style="margin-left:1rem; color:var(--muted); font-size:0.9rem;">
+          <li>Led student organisations and initiated workshops, competitions, and tech programs.</li>
+          <li>Conducted programming workshops for peers.</li>
+          <li>Volunteered in national-level technical events.</li>
+        </ul>
+      </div>
+    </section>
     
       <section id="company-projects">
         <h2 class="section-title">Company Projects</h2>
@@ -609,7 +709,7 @@
 
   <footer>
     <p>© 2025 Pooja P S - Open to Work | Android · .NET · C++ · AI-assisted Development</p>
-  </footer>
+   </footer>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
