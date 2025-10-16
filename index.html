@@ -8,62 +8,169 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --bg: linear-gradient(135deg, #22223B 0%, #4A4E69 50%, #C9ADA7 100%);
-      --surface: #4A4E69;
-      --primary: #F2E9E4;
-      --accent: #C9ADA7;
-      --text: #F2E9E4;
-      --muted: #C9ADA7;
+      --bg: #0d0d0d;
+      --surface: #1a1a1a;
+      --primary: #ffffff;
+      --accent: #3b82f6;
+      --text: #ffffff;
+      --muted: #b3b3b3;
       --radius: 12px;
       --transition: all 0.3s ease;
-      --hover-bg: #22223B;
+      --hover-bg: #2a2a2a;
     }
-
+  
     * {margin: 0; padding: 0; box-sizing: border-box;}
     html {scroll-behavior: smooth;}
     body {font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh;}
-
+  
     header {
-      position: fixed; top: 0; width: 100%; background: rgba(34, 34, 59, 0.95); backdrop-filter: blur(12px);
-      display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 2rem; z-index: 1000;
+      position: fixed; top: 0; width: 100%;
+      background: rgba(0,0,0,0.9); backdrop-filter: blur(10px);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0.8rem 2rem; z-index: 1000;
       border-bottom: 1px solid var(--accent);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
     }
     header h1 {font-size: 1.4rem; font-weight: 700; color: var(--primary);}
-    .open-to-work {color: var(--accent); font-size: 0.9rem; margin-left: 0.8rem; background: rgba(201,173,167,0.2); padding: 0.2rem 0.6rem; border-radius: 6px; border: 1px solid var(--accent);}
-    nav a {margin-left: 1rem; text-decoration: none; color: var(--accent); font-weight: 500; transition: var(--transition); cursor: pointer; position: relative;}
+    .open-to-work {
+      color: var(--accent); font-size: 0.9rem; margin-left: 0.8rem;
+      background: rgba(59,130,246,0.1); padding: 0.2rem 0.6rem;
+      border-radius: 6px; border: 1px solid var(--accent);
+    }
+    nav a {
+      margin-left: 1rem; text-decoration: none; color: var(--muted);
+      font-weight: 500; transition: var(--transition);
+    }
     nav a:hover {color: var(--primary);}
-
+  
     section {padding: 5rem 1.2rem; max-width: 1100px; margin: 0 auto; scroll-margin-top: 120px;}
-
-    .section-title {font-size: 1.6rem; font-weight: 700; color: var(--primary); margin-bottom: 1.5rem; border-left: 5px solid var(--accent); padding-left: 0.6rem;}
-
-    .about-container {display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; background: rgba(74,78,105,0.6); padding: 2rem; border-radius: var(--radius); box-shadow: 0 8px 25px rgba(0,0,0,0.3);}
-    .about-photo {width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); margin-bottom: 1rem;}
+    .section-title {
+      font-size: 1.6rem; font-weight: 700; color: var(--primary);
+      margin-bottom: 1.5rem; border-left: 5px solid var(--accent); padding-left: 0.6rem;
+    }
+  
+    .about-container {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      background: var(--surface); padding: 2rem; border-radius: var(--radius);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    .about-photo {
+      width: 180px; height: 180px; border-radius: 50%; object-fit: cover;
+      border: 3px solid var(--accent); margin-bottom: 1rem;
+    }
     .about-intro {flex: 1; min-width: 280px; margin-left: 2rem;}
     .about-intro h3 {font-size: 1.3rem; color: var(--primary); margin-bottom: 0.8rem;}
-    .about-intro p {color: var(--accent); line-height: 1.6; font-size: 0.95rem; margin-bottom: 1rem;}
-    .about-info {display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.8rem;}
-    .info-item {background: #22223B; border-radius: var(--radius); padding: 0.8rem; border: 1px solid var(--muted); transition: var(--transition); font-size: 0.9rem;}
+    .about-intro p {color: var(--muted); line-height: 1.6; font-size: 0.95rem; margin-bottom: 1rem;}
+  
+    .about-info {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.8rem;
+    }
+    .info-item {
+      background: #121212; border-radius: var(--radius); padding: 0.8rem;
+      border: 1px solid #333; transition: var(--transition); font-size: 0.9rem;
+    }
     .info-item strong {display: block; color: var(--accent); margin-bottom: 0.2rem;}
-    .info-item:hover {background: #2c2c4a; transform: translateY(-3px);}
-
+    .info-item:hover {background: #1e1e1e; transform: translateY(-3px);}
+  
     .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;}
-    .card {background: rgba(34,34,59,0.8); border-radius: var(--radius); padding: 1.2rem; border: 1px solid var(--muted); transition: var(--transition); box-shadow: 0 4px 15px rgba(0,0,0,0.3);}
+    .card {
+      background: var(--surface); border-radius: var(--radius);
+      padding: 1.2rem; border: 1px solid #333;
+      transition: var(--transition); box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
     .card:hover {transform: translateY(-6px); box-shadow: 0 8px 25px rgba(0,0,0,0.4); background: var(--hover-bg);}
-    .card h3 {color: var(--primary); margin-bottom: 0.3rem; font-size: 1rem;}
-    .card p {color: var(--accent); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.8rem;}
-    .card a {color: var(--primary); font-weight: 600; text-decoration: none; font-size: 0.9rem;}
-
-    .recommendation {background: rgba(201,173,167,0.2); border-left: 3px solid var(--accent); border-radius: 8px; padding: 0.8rem; font-size: 0.9rem; color: var(--primary); font-style: italic; margin-top: 0.6rem;}
-
+    .card h3 {color: var(--accent); margin-bottom: 0.3rem; font-size: 1rem;}
+    .card p {color: var(--muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.8rem;}
+    .card a {color: var(--accent); font-weight: 600; text-decoration: none; font-size: 0.9rem;}
+  
+    .recommendation {
+      background: #111; border-left: 3px solid var(--accent);
+      border-radius: 8px; padding: 0.8rem; font-size: 0.9rem;
+      color: var(--primary); font-style: italic; margin-top: 0.6rem;
+    }
+  
     .contact-links {display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem; margin-top: 1.5rem;}
-    .contact-item {display: flex; align-items: center; gap: 0.6rem; color: var(--primary); text-decoration: none; transition: var(--transition); font-size: 1rem; background: rgba(74,78,105,0.7); padding: 0.6rem 1rem; border-radius: var(--radius);}
-    .contact-item:hover {color: var(--accent); background: var(--hover-bg); transform: scale(1.05);}
+    .contact-item {
+      display: flex; align-items: center; gap: 0.6rem; color: var(--primary);
+      text-decoration: none; transition: var(--transition); font-size: 1rem;
+      background: #121212; padding: 0.6rem 1rem; border-radius: var(--radius);
+    }
+    .contact-item:hover {color: var(--accent); background: #1e1e1e; transform: scale(1.05);}
     .contact-item i {font-size: 1.2rem;}
-
-    footer {text-align: center; padding: 1rem; color: var(--accent); border-top: 1px solid var(--muted); font-size: 0.85rem; margin-top: 2rem; background: #22223B;}
+  
+    footer {
+      text-align: center; padding: 1rem; color: var(--muted);
+      border-top: 1px solid #333; font-size: 0.85rem; margin-top: 2rem; background: #000;
+    }
+    .about-extra {
+        margin-top: 1.2rem;
+        padding: 1rem;
+        background: #121212; /* match info-item background */
+        border: 1px solid #333;
+        border-radius: var(--radius);
+        box-shadow: none; /* remove glow to blend better */
+      }
+      
+      .about-extra h4 {
+        color: var(--accent);
+        margin-bottom: 0.6rem;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      
+      .about-extra p {
+        color: var(--muted);
+        line-height: 1.5;
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+      }
+      
+      .coding-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        align-items: center;
+      }
+      
+      .coding-link {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        text-decoration: none;
+        color: var(--accent);
+        font-weight: 500;
+        background: #1a1a1a; /* consistent with section */
+        padding: 0.5rem 0.8rem;
+        border-radius: var(--radius);
+        border: 1px solid #333;
+        transition: var(--transition);
+      }
+      
+      .coding-link:hover {
+        color: var(--primary);
+        background: #2a2a2a;
+        transform: translateY(-2px);
+      }
+      
+      .coding-logo {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+      }
+      
+      
+  
+    .fullscreen-overlay {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.95); display: flex; justify-content: center; align-items: center;
+      z-index: 2000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+    }
+    .fullscreen-overlay.active {opacity: 1; pointer-events: auto;}
+    .fullscreen-overlay img {
+      width: 90%; max-width: 900px; max-height: 90%; object-fit: contain;
+      border-radius: 12px; cursor: zoom-out;
+    }
   </style>
+  
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const links = document.querySelectorAll('nav a');
@@ -90,6 +197,7 @@
     <nav>
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
+      <a href="#personal-projects">Projects</a>
       <a href="#awards">Awards & Achievements</a>
       <a href="#company-projects">Company Projects</a>
       <a href="#contact">Contact</a>
@@ -98,33 +206,73 @@
 
   <main>
     <section id="about">
-      <h2 class="section-title">Pooja P S</h2>
-      <div class="about-container">
-        <img src="your-photo.jpg" alt="Pooja P S" class="about-photo">
-        <div class="about-intro">
-          <h3>Software Engineer II at Trimble Inc.</h3>
-          <p>Experienced Android and cross-platform developer passionate about building scalable, performant, and elegant digital experiences. Proven track record in Kotlin, Jetpack Compose, and .NET MAUI with additional backend and DevOps exposure in Docker and ASP.NET Core.</p>
-          <div class="about-info">
-            <div class="info-item"><strong>Experience</strong>3.2 years (2022 - Aug 2025)</div>
-            <div class="info-item"><strong>Primary Skills</strong>Android Full-Stack Developer(Kotlin), C++ Expert, CI/CD setup, R&D project, AI Development</div>
-            <div class="info-item"><strong>Secondary Skills</strong>Python, FastAPI, CI/CD, SpringBoot</div>
-            <div class="info-item"><strong>Current Location</strong>Trivandrum, Kerala, India</div>
-            <div class="info-item"><strong>Collaboration</strong>Worked with global teams (UK, Finland, Germany, US)</div>
-            <div class="info-item"><strong>Availability</strong>Immediate Joiner, Completed Notice Period</div>
+        <h2 class="section-title">Pooja P S</h2>
+        <div class="about-container">
+          <img src="IMG_5530.jpg" alt="Pooja P S" class="about-photo">
+          <div class="about-intro">
+            <h3>Software Engineer II at Trimble Inc.</h3>
+            <p>Experienced Android and cross-platform developer passionate about building scalable, performant, and elegant digital experiences. Proven track record in Kotlin, Jetpack Compose, and .NET MAUI with additional backend and DevOps exposure in Docker and ASP.NET Core.</p>
+            <div class="about-info">
+              <div class="info-item"><strong>Experience</strong>3.2 years (2022 - Aug 2025)</div>
+              <div class="info-item"><strong>Primary Skills</strong>Android Full-Stack Developer (Kotlin), C++ Expert, CI/CD setup, R&D project, AI Development</div>
+              <div class="info-item"><strong>Secondary Skills</strong>Python, FastAPI, CI/CD, Spring Boot</div>
+              <div class="info-item"><strong>Current Location</strong>Trivandrum, Kerala, India</div>
+              <div class="info-item"><strong>Collaboration</strong>Worked with global teams (UK, Finland, Germany, US)</div>
+              <div class="info-item"><strong>Availability</strong>Immediate Joiner, Completed Notice Period</div>
+            </div>
+      
+        
+            <div class="about-extra">
+              <h4>Data Structures & Algorithms Proficiency</h4>
+              <p>Actively solving algorithmic challenges across top platforms — proficient in arrays, trees, dynamic programming, and graph-based problems. Consistently participate in contests and maintain strong rankings, reinforcing problem-solving and analytical skills essential for large-scale systems engineering.</p>
+              <div class="coding-links">
+                <a href="https://leetcode.com/u/POOJA_P_S/" target="_blank" class="coding-link">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" 
+                       alt="LeetCode Logo" class="coding-logo">LeetCode
+                </a>
+                <a href="https://www.hackerrank.com/profile/poojaps" target="_blank" class="coding-link">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" 
+                       alt="HackerRank Logo" class="coding-logo">HackerRank
+                </a>
+                <a href="https://www.geeksforgeeks.org/user/poojaps2022sc5/" target="_blank" class="coding-link">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" 
+                       alt="GeeksforGeeks Logo" class="coding-logo">GeeksforGeeks
+                </a>
+              </div>
+              
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      
 
-    <section id="experience">
-      <h2 class="section-title">Experience</h2>
-      <div class="card">
-        <h3>Trimble Inc. — Software Engineer II</h3>
-        <p><strong>Location: </strong> Chennai, India | <strong>Duration:</strong> July 2022 - August 2025 | <strong>Promotion:</strong> Software Engineer → Software Engineer II (Jul 2024)</p>
-        <p><strong>Website:</strong> <a href="https://www.trimble.com" target="_blank">www.trimble.com</a></p>
-        <p><strong>Teams Worked: </strong>Mobile Team, Ericsson R&D project, Agentic AI projects</p>
-        <p><strong>Achievements: </strong> Contributed to 7 active projects. Recognised for R&D and POC projects contributions. </p>
-        <div class="recommendation">
+
+      <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="card">
+          <h3>Trimble Inc. — Software Engineer II</h3>
+          <p><strong>Location:</strong> Chennai, India | <strong>Duration:</strong> July 2022 – August 2025 | 
+            <strong>Promotion:</strong> Software Engineer → Software Engineer II
+          </p>
+          <p><strong>Website:</strong> <a href="https://www.trimble.com" target="_blank">www.trimble.com</a></p>
+          <p>
+            Trimble is a Fortune 1000, Product Based maintenance delivering industrial technology 
+            solutions across construction, agriculture, geospatial, and transportation sectors. 
+            I contributed to several large-scale mobile and backend products used by 150K+ active global customers, 
+            focusing on performance, stability, and cross-platform integration.
+          </p>
+          <p>
+            <strong>Key Teams:</strong> Mobile Engineering (Android/MAUI), GNSS Stack (C++), Ericsson R&D, Agentic AI Initiatives
+          </p>
+          <p>
+            <strong>Major Contributions:</strong>  
+            Designed production-ready Android modules in Kotlin and Jetpack Compose, migrated legacy Xamarin 
+            projects to .NET MAUI, and implemented AI-assisted DevOps pipelines.  
+            Delivered multiple end-to-end features, optimized CI/CD workflows, and drove faster release cycles 
+            across global product lines.
+          </p>
+      
+          <div class="recommendation">
           <p><strong>Sriram Narasimhan, Director Engineering at Trimble Inc Chennai, India</strong><br>
           <em>LinkedIn Recommendation</em></p>
           <p>“I had the opportunity to work with Pooja on the SUPL project at Trimble, where she joined my team and immediately took on a significant challenge. 
@@ -150,14 +298,24 @@
         <h2 class="section-title">Personal Projects</h2>
         <div class="grid">
           <div class="card">
-            <h3>Simple Feedback Portal</h3>
-            <img src="feedback-app-ui.png" alt="Simple Feedback Portal UI" style="width:100%; border-radius: var(--radius); margin-bottom: 0.8rem;">
-            <p><strong>Stack:</strong> FastAPI, PostgreSQL, Docker, GitHub Actions</p>
-            <p>A SaaS starter app allowing users to share feedback and rate services, showcasing backend API design and CI/CD automation.</p>
-            <a href="https://github.com/pooja-ps/simple-feedback-portal" target="_blank">GitHub</a> |
-            <a href="https://youtu.be/demo-feedback-app" target="_blank">Video Demo</a>
+            <h3>MindfulWork — Focus & Mood Tracker</h3>
+            <img src="mindfulwork.png" alt="MindfulWork App UI" style="width:100%; border-radius: var(--radius); margin-bottom: 0.8rem;">
+            <p><strong>Stack:</strong> Kotlin · Jetpack Compose · Clean Architecture · Hilt · Room · DataStore</p>
+            <p>A mindfulness-driven productivity app built with Jetpack Compose to track focus sessions and mood patterns, helping users visualize how emotional states influence work performance. Demonstrates advanced Compose UI, MVVM layering, reactive state handling, and modular Kotlin design. <br><strong>Duration:</strong> 4 days</p>
+            <a href="https://github.com/pooja-p-s/mindfulworkapp" target="_blank">GitHub</a> |
+            <a href="https://drive.google.com/file/d/1Ijqe-_49-XATtAnBmcFoHrd-2sx6SWU4/view?usp=share_link" target="_blank">Video Demo</a>
           </div>
-  
+          
+          <div class="card">
+            <h3>OnlineFoodApp — Simple Food Delivery UI</h3>
+            <img src="onlinefoodapp.png" alt="Online Food App UI" style="width:100%; border-radius: var(--radius); margin-bottom: 0.8rem;">
+            <p><strong>Stack:</strong> Kotlin · Jetpack Compose (Material 3) · MVVM · Clean Architecture · Compose Navigation</p>
+            <p>A complete food delivery flow built with Jetpack Compose and Material 3. Includes cart management, checkout, and order success screens — following MVVM with state-driven UI. Focused on reusable composables, scalable architecture, and real-world UI/UX fidelity. <br><strong>Duration:</strong> 4 days</p>
+            <a href="https://github.com/pooja-p-s/fooddeliveryapp" target="_blank">GitHub</a> |
+            <a href="https://drive.google.com/file/d/1YrceolrgLI1kyVOVhk_bwNeyFp6NGGhm/view?usp=share_link" target="_blank">Video Demo</a>
+          </div>
+          
+          
           <div class="card">
             <h3>Expense Tracker App</h3>
             <img src="expense-tracker-ui.png" alt="Expense Tracker UI" style="width:100%; border-radius: var(--radius); margin-bottom: 0.8rem;">
@@ -170,14 +328,52 @@
     </section>
 
     <section id="awards">
-      <h2 class="section-title">Awards & Achievements</h2>
-      <div class="grid">
-        <div class="card"><h3>Trimble Excellence Award</h3><p>Recognized for leading Kotlin Jetpack Compose migration and improving app stability by 40% across teams.</p></div>
-        <div class="card"><h3>Innovation Recognition</h3><p>Awarded for conducting POC integrating Cursor AI & MCP servers for faster backend development.</p></div>
-        <div class="card"><h3>Best Collaboration Award</h3><p>Honored for exceptional teamwork with international teams during Perspective Mobile release.</p></div>
-      </div>
-    </section>
-
+        <h2 class="section-title">Awards & Achievements</h2>
+        <div class="grid">
+      
+          <div class="card">
+            <h3>Bravo Recognition — SUPL Project</h3>
+            <p>Recognized for outstanding ownership and delivery in the SUPL GNSS protocol stack. Solely handled development, debugging, and multi-region collaboration for feature completion and stability.</p>
+            <p><strong>By:</strong> Sriram Narasimhan, Director Engineering, Trimble Inc.</p>
+          </div>
+      
+          <div class="card">
+            <h3>Bravo Recognition — TPM v1.5 Migration</h3>
+            <p>Awarded for leading the migration of the Trimble Perspective Mobile app from Xamarin.Forms to .NET MAUI, ensuring release stability and licensing integration for X9 scanners.</p>
+            <p><strong>By:</strong> Ramaraj Thangapandi, Staff Software Engineer, Trimble Inc.</p>
+          </div>
+      
+          <div class="card">
+            <h3>Bravo Recognition — Trimble Insights Embedded C SDK</h3>
+            <p>Appreciated for developing and documenting embedded SDK prototypes and successfully integrating them into production use cases.</p>
+            <p><strong>By:</strong> Mahadevan Sreenivasan, Senior Engineer, Trimble Inc.</p>
+          </div>
+      
+          <div class="card">
+            <h3>Bravo Recognition — GoZeit Android Migration</h3>
+            <p>Recognized for completing GoZeit Android migration under tight deadlines while managing multiple parallel projects effectively.</p>
+            <p><strong>By:</strong> Ramaraj Thangapandi, Staff Software Engineer, Trimble Inc.</p>
+          </div>
+      
+          <div class="card">
+            <h3>Bravo Recognition — CI/CD Collaboration</h3>
+            <p>Credited for setting up Linux Bamboo build agents and enhancing CI/CD pipelines across Trimble projects.</p>
+            <p><strong>By:</strong> Venkatesh Guptha, DevOps Engineer, Trimble Inc.</p>
+          </div>
+      
+          <div class="card">
+            <h3>Academic Excellence</h3>
+            <p>Graduated as branch topper in final university exams at Sree Chitra Thirunal College of Engineering.</p>
+          </div>
+      
+          <div class="card">
+            <h3>Kerala Reboot Hackathon Finalist (2020)</h3>
+            <p>Selected as one of the finalists in the Kerala Reboot Hackathon organized by ASAP and Govt. of Kerala.</p>
+          </div>
+      
+        </div>
+      </section>
+      
     <section id="company-projects">
   <h2 class="section-title">Company Projects</h2>
   <div class="grid">
@@ -191,12 +387,12 @@
       <h3>Trimble Data Manager</h3>
       <p><strong>Stack:</strong> Kotlin, Jetpack Compose, MVVM, Room, SAF</p>
       <p>Built Kotlin app for Trimble controllers enabling cross-app file handling with scoped storage.</p>
-      <a href="https://play.google.com/store/apps/details?id=com.plancal.gozeit&hl=en-US" target="_blank">Play Store</a>
+      <a href="https://play.google.com/store/search?q=trimble+data+manager&c=apps&hl=en-US" target="_blank">Play Store</a>
     </div>
 
     <div class="card">
       <h3>Trimble Perspective Mobile</h3>
-      <p><strong>Stack:</strong> Kotlin, BLE, Wi-Fi, RxJava</p>
+      <p><strong>Stack:</strong> MAUI, .NET, BLE, Wi-Fi, RxJava</p>
       <p>Developed real-time scanner companion app with BLE/Wi-Fi data sync and 3D preview support.</p>
       <a href="https://play.google.com/store/apps/details?id=com.trimble.perspectivemobile&hl=en-US" target="_blank">Play Store</a>
     </div>
@@ -218,12 +414,12 @@
       <h3>Trimble Precision IQ Tablet App</h3>
       <p><strong>Stack:</strong> Kotlin, Java, RxJava</p>
       <p>Improved localization and precision features for 50K+ users in agriculture domain.</p>
-      <a href="https://play.google.com/store/apps/details?id=net.agri_data.Mobile&hl=en" target="_blank">Play Store</a>
+      <a href="https://ww2.agriculture.trimble.com/blog/trimble-precision-iq-steps-forward-for-todays-farmers/" target="_blank">Play Store</a>
     </div>
 
     <div class="card">
       <h3>Trimble Mobile Manager</h3>
-      <p><strong>Stack:</strong> Android SDK, Kotlin, Networking</p>
+      <p><strong>Stack:</strong> .NET, MAUI, Android SDK, Kotlin, Networking</p>
       <p>Developed and maintained GNSS configuration and correction management app.</p>
       <a href="https://play.google.com/store/search?q=trimble+mobile+manager&c=apps&hl=en-US" target="_blank">Play Store</a>
     </div>
@@ -235,16 +431,37 @@
     <section id="contact">
       <h2 class="section-title">Contact</h2>
       <div class="contact-links">
-        <a class="contact-item" href="mailto:poojapradeepsimla@gmail.com"><i class="fas fa-envelope"></i>Email</a>
+        <a class="contact-item" href="mailto:poojapradeepsimla@gmail.com"><i class="fas fa-envelope"></i>Email: poojapradeepsimla@gmail.com</a>
         <a class="contact-item" href="https://linkedin.com/in/pooja-p-s-/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
-        <a class="contact-item" href="https://github.com/pooja-ps" target="_blank"><i class="fab fa-github"></i>GitHub</a>
-        <a class="contact-item" href="https://play.google.com/store/apps/developer?id=Trimble+Inc." target="_blank"><i class="fab fa-google-play"></i>Play Store</a>
-      </div>
+        <a class="contact-item" href="https://github.com/pooja-p-s" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+        </div>
     </section>
   </main>
 
   <footer>
     <p>© 2025 Pooja P S — Open to Work | Kotlin · Android · .NET · Docker · AI-assisted Development</p>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = document.querySelectorAll(".card img");
+      const overlay = document.createElement("div");
+      overlay.classList.add("fullscreen-overlay");
+      overlay.innerHTML = "<img src='' alt='Fullscreen Image'>";
+      document.body.appendChild(overlay);
+  
+      const overlayImg = overlay.querySelector("img");
+  
+      images.forEach((img) => {
+        img.addEventListener("click", () => {
+          overlayImg.src = img.src;
+          overlay.classList.add("active");
+        });
+      });
+  
+      overlay.addEventListener("click", () => {
+        overlay.classList.remove("active");
+      });
+    });
+  </script>
 </body>
 </html>
